@@ -1,0 +1,234 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: "Montserrat", sans-serif;
+    color: #b52a11;
+}
+
+body {
+    background-color: #e8e3dd;
+}
+
+section {
+    margin-bottom: 8rem;
+}
+
+.navbar {
+    background-color: #e8e3dd;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+.name-logo p {
+    font-family: "Chalkboard";
+    font-weight: lighter;
+    font-size: 1.2rem;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5rem;
+    list-style-type: none;
+}
+
+.navbar li a {
+    color: #b52a11;
+    list-style-type: none;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 0.8rem 1rem;
+}
+
+.navbar li a:hover,
+.navbar li a:focus {
+    color: #5d3c11;
+}
+
+.intro {
+    position: relative;
+    font-family: "Cormorant";
+}
+
+h1 {
+    position: relative;
+    margin-left: 25vh;
+    margin-top: 30vh;
+    max-width: 60vw;
+    font-weight: 300;
+    font-size: 3rem;
+    z-index: 2;
+}
+
+.box {
+    position: absolute;
+    background-color: rgba(85, 119, 164, 0.5);
+    width: 40vw;
+    height: 30vh;
+    left: 32%;
+    top: 30%
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 200;
+    margin: 2rem auto;
+
+}
+
+.project {
+    /* make h2 center */
+    text-align: center;
+}
+
+.project-content {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.project-content img {
+    display: block;
+    width: 30vw;
+    height: auto;
+    border-radius: 10px 0 0 10px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.project-content :hover,
+.project-content :focus {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.info-box {
+    position: relative;
+    width: 30vw;
+    height: auto;
+    background-color: rgb(93, 60, 17, 0.8);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 0 10px 10px 0;
+}
+
+.info-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.info-box p {
+    font-weight: lighter;
+    font-family: "Cormorant";
+    font-size: 2rem;
+    margin-top: 2rem;
+    line-height: 3rem;
+}
+
+.info-box::after {
+    content: "→";
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    color: #fff;
+    transition: transform 0.3s ease-in-out;
+    font-size: 2rem;
+}
+
+.info-box::after {
+    content: " Read More →";
+    color: #fff;
+    font-size: 1rem;
+    font-weight: lighter;
+}
+
+.info-box:hover::after {
+    transform: translateX(0.5rem);
+}
+
+.info-box h3 {
+    font-family: "Cormorant";
+    font-size: 1.5rem;
+}
+
+.contact {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem;
+}
+
+.contact h2 {
+    flex: 1;
+    margin-left: 25vh;
+    font-size: 2rem;
+    z-index: 2;
+}
+
+.box-blue {
+    background-color: rgba(85, 119, 164, 0.5);
+    position: absolute;
+    width: 25vw;
+    height: 30vh;
+    left: 5%;
+    top: 12%
+}
+
+.box-brown {
+    background-color: rgb(93, 60, 17, 0.8);
+    position: absolute;
+    width: 10vw;
+    height: 15vh;
+    left: 28%;
+    top: 50%
+}
+
+.contact-info {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-info input,
+.contact-info textarea {
+    width: 90%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-info button {
+    width: 20%;
+    padding: 1rem;
+    border: none;
+    background-color: #b52a11;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out;
+    margin: 0 auto;
+}
+
+.contact-info button:hover {
+    background-color: #5d3c11;
+    color: #fff;
+}

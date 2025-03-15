@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: "Montserrat", sans-serif;
+    color: #b52a11;
+}
+
+body {
+    background-color: #e8e3dd;
+}
+
+section {
+    margin-bottom: 8rem;
+}
+
+.navbar {
+    background-color: #e8e3dd;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+.name-logo p {
+    font-family: "Chalkboard";
+    font-weight: lighter;
+    font-size: 1.2rem;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5rem;
+    list-style-type: none;
+}
+
+.navbar li a {
+    color: #b52a11;
+    list-style-type: none;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 0.8rem 1rem;
+}
+
+.navbar li a:hover,
+.navbar li a:focus {
+    color: #5d3c11;
+}
