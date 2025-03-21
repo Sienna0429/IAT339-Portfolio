@@ -274,3 +274,15 @@ button {
 .stage-3-left h4 {
     text-align: start;
 }
+
+.storyboard-container {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.stage-4 img {
+    width: 30vw;
+    height: auto;
+    border: #5d3c11 3px solid;
+}
