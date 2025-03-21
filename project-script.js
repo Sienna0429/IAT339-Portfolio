@@ -11,12 +11,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     prevBtn.addEventListener("click", () => {
-        index = (index > 0) ? index - 1 : totalSlides - 1; // 无限循环
+        index = (index > 0) ? index - 1 : totalSlides - 1;
         updateSlidePosition();
     });
 
     nextBtn.addEventListener("click", () => {
-        index = (index < totalSlides - 1) ? index + 1 : 0; // 无限循环
+        index = (index < totalSlides - 1) ? index + 1 : 0;
         updateSlidePosition();
     });
 });
