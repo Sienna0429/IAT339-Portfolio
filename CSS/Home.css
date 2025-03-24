@@ -186,7 +186,7 @@ h2 {
     padding: 3rem;
 }
 
-.contact h2 {
+.lets-talk h2 {
     flex: 1;
     margin-left: 25vh;
     font-size: 2rem;
@@ -253,6 +253,8 @@ h2 {
 
     h1 {
         font-size: 2rem;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     h2 {
@@ -338,7 +340,7 @@ h2 {
 
     .info-box {
         width: 80vw;
-        height: auto;
+        height: 35vh;
         border-radius: 0 0 10px 10px;
     }
 
@@ -378,11 +380,13 @@ h2 {
         gap: 2rem;
     }
 
-    .contact h2 {
+    .lets-talk h2 {
+        display: block;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
         font-size: 1.5rem;
-        text-align: start;
-        margin: auto;
-        z-index: 2;
     }
 
     .contact-info {
@@ -390,6 +394,7 @@ h2 {
         width: 100%;
         max-width: 500px;
         align-items: center;
+        margin: 0 auto;
     }
 
     .contact-info input,
@@ -398,13 +403,35 @@ h2 {
         font-size: 1rem;
     }
 
+    .contact-info label {
+        font-size: 0.95rem;
+        width: 100%;
+        text-align: left;
+    }
+
     .contact-info button {
         width: 50%;
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
     .box-blue,
     .box-brown {
         display: none;
+    }
+}
+
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .box {
+        width: 30vw;
+        height: 10vh;
+        left: 40%;
+        top: 30%
     }
 }
