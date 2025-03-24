@@ -11,13 +11,16 @@
 
 <body>
     <div class="navbar">
+        <button class="menu-toggle">☰</button>
+
         <div class="name-logo">
             <p>Sienna Wu</p>
         </div>
-        <ul>
-            <li><a href="#project">Project</a></li>
+
+        <ul class="nav-links">
+            <li><a href="project">Project</a></li>
             <li><a href="Bio">Bio</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="Contact">Contact</a></li>
         </ul>
     </div>
 
@@ -35,7 +38,7 @@
         <h2>My Project</h2>
         <div class="project-content">
             <a href="project-link">
-                <img src="images/interaction.png" alt="Store layout">
+                <img src="images/interaction.png" alt="157Moments staff interacting with a customer">
             </a>
             <div class="info-box">
                 <img src="images/157Moments-logo.png">
@@ -46,9 +49,11 @@
     </section>
 
     <section id="contact" class="contact">
-        <div class="box-blue"></div>
-        <div class="box-brown"></div>
-        <h2>Let's Talk</h2>
+        <div class="let's-talk">
+            <div class="box-blue"></div>
+            <div class="box-brown"></div>
+            <h2>Let's Talk</h2>
+        </div>
         <form class="contact-info">
             <label for="name">Full Name:</label>
             <input type="text" id="name" name="name" placeholder="Enter your full name" required>
@@ -62,4 +67,19 @@
             <button type="submit">Send</button>
         </form>
     </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const menuBtn = document.querySelector(".menu-toggle");
+            const navLinks = document.querySelector(".nav-links");
+
+            menuBtn.addEventListener("click", () => {
+                navLinks.classList.toggle("active");
+            });
+        });
+    </script>
+
+
+
+
 </body>

@@ -11,10 +11,13 @@
 
 <body>
     <div class="navbar">
+        <button class="menu-toggle">☰</button>
+
         <div class="name-logo">
             <p>Sienna Wu</p>
         </div>
-        <ul>
+
+        <ul class="nav-links">
             <li><a href="project">Project</a></li>
             <li><a href="Bio">Bio</a></li>
             <li><a href="Contact">Contact</a></li>
@@ -26,7 +29,9 @@
         <div class="bio">
             <div class="bio-text">
                 <h2>👋 Hi there!</h2>
-                <p>I'm Sienna Wu, a passionate UX/UI designer studying Interactive Arts & Technology at Simon Fraser
+
+                <p class="intro-text">I'm Sienna Wu, a passionate UX/UI designer studying Interactive Arts & Technology
+                    at Simon Fraser
                     University. <br>I take
                     a
                     user-centered
@@ -49,4 +54,15 @@
     <section class="contact-info">
 
     </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const menuBtn = document.querySelector(".menu-toggle");
+            const navLinks = document.querySelector(".nav-links");
+
+            menuBtn.addEventListener("click", () => {
+                navLinks.classList.toggle("active");
+            });
+        });
+    </script>
 </body>

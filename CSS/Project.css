@@ -28,45 +28,6 @@ section {
     margin-bottom: 4rem;
 }
 
-.navbar {
-    font-family: "Montserrat", sans-serif;
-    background-color: #e8e3dd;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 2rem;
-}
-
-.name-logo p {
-    font-family: "Chalkboard";
-    font-weight: lighter;
-    font-size: 1.2rem;
-}
-
-.navbar ul {
-    display: flex;
-    justify-content: flex-end;
-    gap: 1.5rem;
-    list-style-type: none;
-}
-
-.navbar li a {
-    color: #b52a11;
-    list-style-type: none;
-    font-size: 1rem;
-    text-decoration: none;
-    padding: 0.8rem 1rem;
-}
-
-.navbar li a:hover,
-.navbar li a:focus {
-    color: #5d3c11;
-}
-
 h1 {
     font-family: "Cormorant";
     margin-top: 10rem;
@@ -94,6 +55,55 @@ h4 {
 h5 {
     font-size: 1.3rem;
     margin-top: 1rem;
+}
+
+.navbar {
+    font-family: "Montserrat", sans-serif;
+    background-color: #e8e3dd;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    z-index: 1000;
+}
+
+.name-logo p {
+    font-family: "Chalkboard";
+    font-weight: lighter;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.nav-links li a {
+    color: #b52a11;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 0.8rem 1rem;
+}
+
+.nav-links li a:hover,
+.nav-links li a:focus {
+    color: #5d3c11;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #b52a11;
+    cursor: pointer;
 }
 
 .subtitle {
@@ -131,12 +141,6 @@ h5 {
     font-size: 1.2rem;
 }
 
-/* .stage-name,
-.stage-discription,
-.poster-group {
-    border: 1px dashed lightgray;
-} */
-
 .stage-1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -164,7 +168,6 @@ h5 {
 }
 
 .stage-name h3 {
-
     line-height: 1;
 }
 
@@ -327,7 +330,6 @@ button {
     margin-top: 1rem;
     color: #5d3c11;
     justify-content: space-around;
-    /* background-color: rgba(85, 119, 164, 0.5); */
     border-radius: 20px;
     border: #5d3c11 3px dashed;
 }
@@ -492,4 +494,134 @@ button {
     aspect-ratio: 1 / 1;
     border-radius: 50%;
     object-fit: cover;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .navbar {
+        justify-content: center;
+        padding: 1rem;
+        position: fixed;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        left: 1rem;
+        top: 1rem;
+        z-index: 1100;
+    }
+
+    .name-logo {
+        text-align: center;
+        flex: 1;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        left: -60%;
+        width: 30%;
+        height: 100vh;
+        background-color: #e8e3dd;
+        flex-direction: column;
+
+        gap: 2rem;
+        transition: left 0.3s ease-in-out;
+        z-index: 1050;
+        display: flex;
+
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 5rem 2rem;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .navbar .nav-links {
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .client-intro {
+        flex-direction: column;
+    }
+
+    .client-intro img {
+        margin: auto;
+        width: 80vw;
+        height: auto;
+    }
+
+    .client-intro p {
+        width: 80vw;
+    }
+
+    .stage-number {
+        font-size: 5rem;
+    }
+
+    .stage-name h3 {
+        font-size: 1.5rem;
+    }
+
+    .stage-1,
+    .stage-2,
+    .stage-3,
+    .storyboard-how-it-helped,
+    .workshop-container,
+    .activity-3-columns,
+    .workshop-review {
+        display: flex;
+        flex-direction: column;
+    }
+
+    li {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .poster-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .poster-group img {
+        width: 80vw;
+        height: auto;
+    }
+
+    .concept {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .storyboard-help h5 {
+        margin-bottom: 0.3rem;
+        font-size: 1.1rem;
+    }
+
+    .storyboard-help ul {
+        line-height: 1.5;
+    }
+
 }
