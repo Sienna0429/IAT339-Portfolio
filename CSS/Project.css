@@ -191,9 +191,43 @@ h5 {
 }
 
 .poster-group img {
-    width: 40%;
+    width: 50%;
     height: auto;
     object-fit: contain;
+    border-radius: 10px;
+}
+
+.persona-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 3rem;
+    justify-items: center;
+}
+
+.persona-container p {
+    text-align: center;
+}
+
+.persona-container img {
+    width: 30%;
+    height: auto;
+}
+
+.persona-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.design-focus {
+    font-weight: bold;
 }
 
 .carousel {
@@ -242,24 +276,91 @@ button {
 
 .stage-2 {
     display: flex;
-    align-items: center;
+    flex-direction: column;
 }
 
-.stage-3 {
+.concept-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 1.5rem;
-    align-items: start;
+    gap: 3rem;
+    justify-items: center;
 }
 
-.stage-3-left {
-    grid-column: 1 / 2;
-    grid-row: 1 / 3;
+.concept-item {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.8rem;
+}
+
+.concept-item img {
+    width: 100%;
+    min-height: 12rem;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    display: block;
+}
+
+.concept-item p {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.user-journey-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* 水平居中 */
     gap: 1rem;
-    padding-left: 2rem;
+    flex-wrap: nowrap;
+    /* overflow-x: auto; */
+    scroll-behavior: smooth;
+    padding: 1rem 2rem;
+}
+
+.journey-container {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 2rem;
+}
+
+.journey-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 10rem;
+}
+
+.journey-step img {
+    width: 10rem;
+    height: auto;
+    min-height: 12rem;
+    /* ✅ 设置统一最小高度 */
+    object-fit: contain;
+}
+
+.label {
+    margin-top: 0.5rem;
+    background-color: #e6d88d;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    color: #5d3c11;
+    position: relative;
+    clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
+    white-space: nowrap;
+    font-size: 1rem;
+}
+
+.user-journey-container img {
+    flex: 0 0 auto;
+    width: 12rem;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
 }
 
 .user-journey-map {
@@ -617,6 +718,32 @@ button {
     .concept-image img {
         width: 30vw;
         height: auto;
+    }
+
+    .user-journey-container {
+        flex-wrap: wrap;
+        /* ✅ 小屏改为换行 */
+        justify-content: center;
+    }
+
+    .user-journey-container img {
+        width: 45%;
+        /* 可调：两列排列 */
+        margin-bottom: 1rem;
+    }
+
+    .journey-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .journey-step img {
+        width: 7rem;
+    }
+
+    .label {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.7rem;
     }
 
     .storyboard img {
