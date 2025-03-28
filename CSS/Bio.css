@@ -225,8 +225,15 @@ h4 {
         flex-direction: column;
     }
 
-    .intro-text p {
-        width: 100%;
+    .bio h2 {
+        margin-bottom: 1rem;
+        margin: auto;
+        text-align: center;
+    }
+
+    .bio p {
+        max-width: 90vw;
+        margin: 1rem 2rem;
     }
 
     .bio img {
@@ -236,5 +243,7 @@ h4 {
         order: -1;
     }
 
-    .contact-me {}
+    .contact-me {
+        text-align: center;
+    }
 }
