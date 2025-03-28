@@ -5,30 +5,35 @@
     <meta charset="utf-8">
     <title>Sienna Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="CSS/Home.css" rel="stylesheet">
+    <link href="CSS/Index.css" rel="stylesheet">
 
 </head>
 
 <body>
     <div class="navbar">
-        <button class="menu-toggle">☰</button>
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox" />
+
+        <label for="menu-toggle" class="menu-toggle">☰</label>
 
         <div class="name-logo">
             <p>Sienna Wu</p>
         </div>
 
         <ul class="nav-links">
-            <li><a href="project">Project</a></li>
-            <li><a href="Bio">Bio</a></li>
-            <li><a href="Contact">Contact</a></li>
+            <li><a href="#project">Project</a></li>
+            <li><a href="#bio">Bio</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </div>
+
 
     <section class="intro">
 
         <h1>Hi!👋
             <br>I'm Sienna Wu.
-            <br>I'm a passionate design student focusing on creating seamless, user-friendly experiences!
+            <br>As a UX-focused design student, I turn insights into intuitive experiences—blending research,
+            interaction design, and
+            visual storytelling to craft solutions that feel effortless for users.
         </h1>
         <div class="box"></div>
     </section>
@@ -38,10 +43,11 @@
         <h2>My Project</h2>
         <div class="project-content">
             <a href="project-link">
-                <img src="images/interaction.png" alt="157Moments staff interacting with a customer">
+                <img src="images/interaction.png" alt="157Moments staff interacting with a customer" width="419"
+                    height="480">
             </a>
             <div class="info-box">
-                <img src="images/157Moments-logo.png">
+                <img src="images/157Moments-logo.png" alt="157 Moments logo" width="614" height="157">
                 <h3>USER EXPERIENCE DESIGN</h3>
                 <p>We designed a new user interaction solution for a Vancouver-based fashion boutique. </p>
             </div>
@@ -67,19 +73,4 @@
             <button type="submit">Send</button>
         </form>
     </section>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const menuBtn = document.querySelector(".menu-toggle");
-            const navLinks = document.querySelector(".nav-links");
-
-            menuBtn.addEventListener("click", () => {
-                navLinks.classList.toggle("active");
-            });
-        });
-    </script>
-
-
-
-
 </body>
