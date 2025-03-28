@@ -9,19 +9,25 @@ html {
     color: #b52a11;
 }
 
+.page-wrapper {
+    max-width: 80rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 body {
     background-color: #e8e3dd;
-    margin: 0 2rem;
 }
 
 p {
     font-size: 1.2rem;
-    margin-top: 0.8rem;
+    line-height: 1.6;
 }
 
 li {
     font-size: 1.2rem;
-    margin-bottom: 1rem;
 }
 
 section {
@@ -117,31 +123,28 @@ h5 {
     margin-bottom: 1rem;
 }
 
-.project-title img {
-    height: auto;
-    width: 40vw;
-    border-radius: 10px;
-    margin-left: 10rem;
-    margin-top: 1rem;
-}
 
 .client-intro {
     display: flex;
+    align-items: stretch;
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.client-intro img {
+    width: 50%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+/* 右侧文字部分 */
+.client-intro div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-}
-
-.client-intro h3 {
-    margin-left: 5rem;
-    font-size: 1.5rem;
-    margin-top: 1rem;
-}
-
-.client-intro p {
-    margin-left: 5rem;
-    margin-top: 1rem;
-    max-width: 40vw;
-    font-size: 1.2rem;
 }
 
 .stage-1 {
@@ -158,7 +161,7 @@ h5 {
     display: flex;
     align-items: center;
     gap: 1rem;
-    margin-left: 4rem;
+    /* margin-left: 4rem; */
 }
 
 .stage-number {
@@ -179,7 +182,6 @@ h5 {
     grid-column: 2/3;
     grid-row: 1/3;
     gap: 2rem;
-    margin-right: 2rem;
 }
 
 .poster-group img {
@@ -605,6 +607,12 @@ button {
 
 /* Responsive */
 @media (max-width: 48em) {
+
+    .page-wrapper {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
     h1 {
         font-size: 2rem;
     }
@@ -674,26 +682,32 @@ button {
 
     .client-intro {
         flex-direction: column;
+        align-items: center;
     }
 
     .client-intro img {
         margin: auto;
-        width: 80vw;
+        width: 100%;
+        max-width: 90vw;
         height: auto;
     }
 
+    .client-intro div {
+        width: 100%;
+        max-width: 40rem;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+
     .client-intro h3 {
-        margin: auto 2rem;
-        font-size: 1.5rem;
-        margin-top: 0.8rem;
         text-align: center;
+        margin-top: 1rem;
     }
 
     .client-intro p {
-        margin: auto 2rem;
-        margin-top: 0.8rem;
-        max-width: 80vw;
-        font-size: 1.2rem;
+        text-align: left;
+        padding: 0 1rem;
+        line-height: 1.6;
     }
 
     .stage-number {
@@ -708,16 +722,6 @@ button {
         justify-content: center;
     }
 
-    .stage-1,
-    .stage-2,
-    .stage-3,
-    .storyboard-how-it-helped,
-    .workshop-container,
-    .activity-3-columns,
-    .workshop-review {
-        display: flex;
-        flex-direction: column;
-    }
 
     li {
         font-size: 1rem;
@@ -806,13 +810,21 @@ button {
         line-height: 1.5;
     }
 
+    @media (max-width: 60em) {
+        .client-intro {
+            flex-direction: column;
+            align-items: center;
+        }
 
-    .activity-1 img,
-    .activity-2 img,
-    .activity-3 img,
-    .activity-4 img {
-        width: 70vw;
-        height: auto;
+        .client-intro img {
+            width: 100%;
+            max-width: 90vw;
+            object-fit: contain;
+        }
+
+        .client-intro div {
+            width: 100%;
+            padding: 0 1rem;
+        }
     }
-
 }
