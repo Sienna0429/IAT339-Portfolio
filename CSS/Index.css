@@ -19,9 +19,10 @@ section {
 
 h1 {
     position: relative;
-    margin-left: 25vh;
     margin-top: 30vh;
     max-width: 60vw;
+    margin-left: auto;
+    margin-right: auto;
     font-weight: 300;
     font-size: 3rem;
     z-index: 2;
@@ -31,6 +32,10 @@ h2 {
     font-size: 2rem;
     font-weight: 200;
     margin: 2rem auto;
+}
+
+h3 {
+    font-size: 1.5rem;
 }
 
 p {
@@ -126,6 +131,8 @@ a {
     display: block;
     width: 30vw;
     height: auto;
+    max-width: 100%;
+    object-fit: cover;
     border-radius: 10px 0 0 10px;
     transition: opacity 0.3s ease-in-out;
 }
@@ -156,14 +163,23 @@ a {
     position: absolute;
     top: 0;
     left: 0;
+    max-width: 100%;
+    height: auto;
+    margin-top: 0.5rem;
+    object-fit: contain;
+}
+
+.info-box h3 {
+    font-family: "Cormorant";
+    margin-top: 4rem;
 }
 
 .info-box p {
-    font-weight: lighter;
     font-family: "Cormorant";
-    font-size: 2rem;
-    margin-top: 2rem;
-    line-height: 3rem;
+    font-weight: lighter;
+    line-height: 1.6;
+    padding: 0 1rem;
+    margin-top: 1rem;
 }
 
 .read-more {
@@ -182,46 +198,52 @@ a {
     opacity: 1;
 }
 
-.info-box h3 {
-    font-family: "Cormorant";
-    font-size: 1.5rem;
-}
+
 
 .contact {
     position: relative;
     display: grid;
     grid-template-columns: 1fr 2fr;
-    /* align-items: center;
-    justify-content: center; */
     gap: 2rem;
     padding: 3rem;
 }
 
+.lets-talk {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    flex-direction: column;
+}
+
 .lets-talk h2 {
-    flex: 1;
-    margin-left: 25vh;
-    font-size: 2rem;
     z-index: 2;
+    margin: 0;
+}
+
+.box-blue,
+.box-brown {
+    position: absolute;
+    z-index: 1;
 }
 
 .box-blue {
     background-color: rgba(85, 119, 164, 0.5);
-    position: absolute;
     width: 20vw;
     height: 20vh;
-    left: 8%;
-    top: 12%;
-    z-index: -1;
+    top: 35%;
+    left: 30%;
+    transform: translate(-30%, -30%);
 }
 
 .box-brown {
-    background-color: rgb(93, 60, 17, 0.8);
-    position: absolute;
+    background-color: rgba(93, 60, 17, 0.8);
     width: 10vw;
     height: 15vh;
-    left: 20%;
-    top: 30%;
-    z-index: -1;
+    bottom: 20%;
+    right: 15%;
+    transform: translate(30%, 30%);
 }
 
 .contact-info {
@@ -260,27 +282,113 @@ a {
 
 
 /* Responsive */
-@media (max-width: 48em) {
+@media (max-width: 65em) {
+    h1 {
+        font-size: 2rem;
+        margin-top: 20vh;
+    }
+
     section {
         margin-bottom: 4rem;
     }
 
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .box {
+        width: 35vw;
+        height: 25vh;
+        left: 40%;
+        top: 30%
+    }
+
+    .project-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        max-width: 90vw;
+        margin: 0 auto;
+    }
+
+    .project-content>img {
+        width: 60vw;
+        height: auto;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .info-box {
+        width: 60vw;
+        height: auto;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .read-more {
+        font-size: 0.7rem;
+        bottom: 1rem;
+        right: 1rem;
+    }
+
+    .contact {
+        grid-template-columns: 1fr;
+        align-items: center;
+        padding: 2rem 1rem;
+        gap: 1rem;
+    }
+
+    .lets-talk h2 {
+        text-align: center;
+    }
+
+    .box-blue,
+    .box-brown {
+        display: none;
+    }
+
+    .contact-info {
+        order: 2;
+        width: 100%;
+        max-width: 80%;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .contact-info input,
+    .contact-info textarea {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .contact-info label {
+        font-size: 0.95rem;
+        width: 100%;
+        text-align: left;
+    }
+
+    .contact-info button {
+        width: 50%;
+        font-size: 1.1rem;
+    }
+
+
+}
+
+@media (max-width: 48em) {
+    section {
+        margin-bottom: 2rem;
+    }
+
     h1 {
-        font-size: 2rem;
-        margin-left: auto;
-        margin-right: auto;
+        font-size: 1.5rem;
+        margin-top: 10vh;
     }
 
     h2 {
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
 
     p {
         font-size: 1rem;
-    }
-
-    .intro h1 {
-        margin-top: 10vh;
     }
 
     .navbar {
@@ -294,8 +402,8 @@ a {
     .menu-toggle {
         display: block;
         position: absolute;
-        top: 1rem;
-        left: 1rem;
+        top: 10%;
+        left: 5%;
         font-size: 2rem;
         cursor: pointer;
         z-index: 999;
@@ -335,9 +443,9 @@ a {
     }
 
     .box {
-        width: 30vw;
-        height: 20vh;
-        left: 40%;
+        width: 35vw;
+        height: 18vh;
+        left: 45%;
         top: 30%
     }
 
@@ -350,15 +458,14 @@ a {
     }
 
     .project-content>img {
-        width: 80vw;
+        width: 60vw;
         height: auto;
         border-radius: 10px 10px 0 0;
         margin: 0 auto;
     }
 
     .info-box {
-        width: 80vw;
-        height: 35vh;
+        width: 60vw;
         border-radius: 0 0 10px 10px;
     }
 
@@ -369,81 +476,20 @@ a {
     }
 
     .info-box h3 {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
+        margin-top: 2rem;
     }
 
     .info-box p {
-        font-size: 1rem;
-        line-height: 1.5;
         padding: 0 1rem;
         margin-top: 1rem;
     }
 
     .read-more {
-        font-size: 0.8rem;
-        bottom: 1rem;
-        right: 1rem;
+        font-size: 0.5rem;
+        bottom: 0.8rem;
+        right: 0.8rem;
     }
 
-    .contact {
-        grid-template-columns: 1fr;
-        align-items: center;
-        padding: 2rem 1rem;
-        gap: 2rem;
-    }
 
-    .lets-talk h2 {
-        display: block;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
-        font-size: 1.5rem;
-    }
-
-    .contact-info {
-        order: 2;
-        width: 100%;
-        max-width: 500px;
-        align-items: center;
-        margin: 0 auto;
-    }
-
-    .contact-info input,
-    .contact-info textarea {
-        width: 100%;
-        font-size: 1rem;
-    }
-
-    .contact-info label {
-        font-size: 0.95rem;
-        width: 100%;
-        text-align: left;
-    }
-
-    .contact-info button {
-        width: 50%;
-        font-size: 0.8rem;
-    }
-
-    .box-blue,
-    .box-brown {
-        display: none;
-    }
-}
-
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1rem;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .box {
-        width: 30vw;
-        height: 10vh;
-        left: 40%;
-        top: 30%
-    }
 }

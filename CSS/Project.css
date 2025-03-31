@@ -469,7 +469,7 @@ h5 {
 
 
 /* Responsive */
-@media (max-width: 60em) {
+@media (max-width: 65em) {
     .client-intro {
         flex-direction: column;
         align-items: center;
@@ -515,9 +515,7 @@ h5 {
 
     .interview-img img {
         max-width: 100%;
-        /* 小屏时允许图片最大显示 */
         margin-top: 1rem;
-        /* 与上方段落有间距 */
     }
 
     .journey-container {
@@ -590,8 +588,8 @@ h5 {
     .menu-toggle {
         display: block;
         position: absolute;
-        top: 1rem;
-        left: 1rem;
+        top: 10%;
+        left: 5%;
         font-size: 2rem;
         cursor: pointer;
         z-index: 999;
