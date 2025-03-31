@@ -367,7 +367,7 @@ a {
 
     .contact-info button {
         width: 50%;
-        font-size: 1.1rem;
+        font-size: 0.8rem;
     }
 
 
@@ -389,6 +389,7 @@ a {
 
     p {
         font-size: 1rem;
+        line-height: 1.2rem;
     }
 
     .navbar {

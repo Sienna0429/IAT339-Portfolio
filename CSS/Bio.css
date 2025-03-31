@@ -190,6 +190,11 @@ a {
         font-size: 1rem;
     }
 
+    p {
+        font-size: 1rem;
+        line-height: 1.2rem;
+    }
+
     .navbar {
         display: flex;
         flex-direction: column;
@@ -248,7 +253,7 @@ a {
         gap: 1.5rem;
     }
 
-    .bio h2 {
+    .bio-text h2 {
         margin-bottom: 1rem;
         margin: auto;
         text-align: center;
