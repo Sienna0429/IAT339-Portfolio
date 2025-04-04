@@ -36,14 +36,24 @@
 
     <section class="intro">
 
-        <h1>Hi!👋
-            <br>I'm Sienna Wu.
-            <br>As a UX-focused design student, I turn insights into intuitive experiences—blending research,
-            interaction design, and
-            visual storytelling to craft solutions that feel effortless for users.
+        <h1 class="typing-css">
+            <div>Hi!👋</div>
+            <div>I'm Sienna Wu.</div>
+            <div>
+                As a UX-focused design student, I turn insights into intuitive experiences—blending research,
+                interaction design, and visual storytelling to craft solutions that feel effortless for users.
+            </div>
         </h1>
-        <div class="box"></div>
+
+        <!-- <div class="box"></div> -->
     </section>
+
+    <div class="scroll-hint">
+        <div class="arrow-down">↓</div>
+        <!-- <p class="scroll-text">Scroll down to see my work</p> -->
+    </div>
+
+
 
 
     <section id="project" class="project">
@@ -53,8 +63,8 @@
             class="project-link">
             <div class="project-content">
 
-                <img src="images/interaction-562.webp" alt="Staff at 157 Moments interacting with a customer"
-                    width="562" height="645" srcset="
+                <img class="project-image" src="images/interaction-562.webp"
+                    alt="Staff at 157 Moments interacting with a customer" width="562" height="645" srcset="
                 images/interaction-400.webp 400w,
                 images/interaction-562.webp 562w
               " sizes="(max-width: 48em) 90vw, 500px" />
@@ -73,10 +83,12 @@
 
     <section id="contact" class="contact">
         <div class="lets-talk">
-            <div class="box-blue"></div>
-            <div class="box-brown"></div>
+            <div class="box-blue hidden"></div>
+            <div class="box-brown hidden"></div>
             <h2>Let's Talk</h2>
         </div>
+
+
         <form class="contact-info">
             <label for="name">Full Name:</label>
             <input type="text" id="name" name="name" placeholder="Enter your full name" required>
@@ -90,4 +102,60 @@
             <button type="submit">Send</button>
         </form>
     </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2025 Sienna Wu. Designed & Developed by me 🖤</p>
+
+            <ul class="footer-links">
+                <li><a href="mailto:xwa250@sfu.ca">Email</a></li>
+                <li><a href="https://www.linkedin.com/in/sienna-wu-524033268/">LinkedIn</a></li>
+                <li><a href="https://github.com/Sienna0429/IAT339-Portfolio">GitHub</a></li>
+                <li><a href="#top">Back to top ↑</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+
+        const image = document.querySelector('.project-image');
+        const infoBox = document.querySelector('.info-box');
+
+        const observerImageInfo = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal');
+                    observerImageInfo.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.3
+        });
+
+        if (image) observerImageInfo.observe(image);
+        if (infoBox) observerImageInfo.observe(infoBox);
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const revealBoxes = document.querySelectorAll('.box-blue, .box-brown');
+
+            const observerBoxes = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('reveal');
+                        entry.target.classList.remove('hidden');
+                        observerBoxes.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.3
+            });
+
+            revealBoxes.forEach(box => observerBoxes.observe(box));
+        });
+    </script>
+
+
+
 </body>
