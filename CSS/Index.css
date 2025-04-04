@@ -432,6 +432,7 @@ a {
 .footer-links a {
     text-decoration: none;
     color: #5d3c11;
+    font-size: 1.5rem;
 }
 
 .footer-links a:hover {
