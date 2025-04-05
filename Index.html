@@ -46,14 +46,11 @@
             </div>
         </h1>
 
-        <!-- <div class="box"></div> -->
+        <div class="box"></div>
+        <div class="scroll-hint">
+            <div class="arrow-down">↓</div>
+        </div>
     </section>
-
-    <div class="scroll-hint">
-        <div class="arrow-down">↓</div>
-        <!-- <p class="scroll-text">Scroll down to see my work</p> -->
-    </div>
-
 
 
 
@@ -133,6 +130,33 @@
         </div>
     </footer>
 
+
+    <script>
+        const box = document.querySelector('.box');
+        let x = 100;
+        let y = 100;
+        let dx = 4;
+        let dy = 4;
+        const boxSize = 80;
+
+        function moveBox() {
+            const winWidth = window.innerWidth;
+            const winHeight = window.innerHeight;
+
+            if (x + boxSize >= winWidth || x <= 0) dx *= -1;
+            if (y + boxSize >= winHeight || y <= 0) dy *= -1;
+
+            x += dx;
+            y += dy;
+
+            box.style.left = `${x}px`;
+            box.style.top = `${y}px`;
+
+            requestAnimationFrame(moveBox);
+        }
+
+        moveBox();
+    </script>
 
     <script>
 

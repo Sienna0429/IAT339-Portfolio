@@ -181,13 +181,11 @@ a {
 }
 
 .footer {
-    /* background-color: #5d3c11; */
     font-family: "Cormorant", sans-serif;
     padding: 2rem 1rem;
     text-align: center;
     font-size: 1rem;
     color: #e8e3dd;
-    /* border-top: 1.5px solid #5d3c11; */
 }
 
 .footer-content {
@@ -313,5 +311,20 @@ a {
 
     .contact-me {
         text-align: center;
+    }
+
+
+    .footer {
+        padding: 1.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .footer-content {
+        padding: 0 1rem;
+    }
+
+
+    .footer-links a {
+        font-size: 1.2rem;
     }
 }
