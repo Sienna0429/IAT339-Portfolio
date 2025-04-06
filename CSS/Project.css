@@ -45,8 +45,8 @@ h1 {
     font-family: "Cormorant";
     margin-top: 10rem;
     text-align: center;
-    font-weight: 500;
-    font-size: 2rem;
+    font-weight: bold;
+    font-size: 2.5rem;
 }
 
 h2 {
@@ -134,7 +134,7 @@ h5 {
 
 .subtitle {
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-top: 2rem;
     margin-bottom: 1rem;
 }
@@ -189,7 +189,7 @@ h5 {
 
 .stage-name h3 {
     line-height: 1;
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin: 0;
 }
 
@@ -253,7 +253,6 @@ h5 {
     opacity: 1;
     transform: translateY(0);
     transition-delay: 0.2s;
-    /* 可调节延迟 */
 }
 
 .persona-card img {
@@ -341,6 +340,7 @@ h5 {
     pointer-events: none;
 }
 
+/* Reference: https: //developer.mozilla.org/en-US/docs/Web/CSS/@keyframes */
 @keyframes arrow-blink {
 
     0%,
@@ -371,6 +371,7 @@ h5 {
     scroll-snap-align: start;
     flex-shrink: 0;
     background-color: rgba(255, 255, 255, 0.4);
+    transition: transform 0.3s ease-in-out;
 }
 
 .journey-step img {
@@ -384,6 +385,11 @@ h5 {
 .journey-step img:hover,
 .journey-step img:focus {
     transform: scale(1.3);
+}
+
+.journey-step:hover,
+.journey-step:focus {
+    transform: scale(1.05);
 }
 
 .label {
@@ -436,22 +442,6 @@ h5 {
     max-width: 30vw;
 }
 
-.reflection-title {
-    font-size: 1.5rem;
-    color: #e8e3dd;
-    margin-top: 1rem;
-    text-align: center;
-}
-
-.reflection {
-    margin-top: 1rem;
-    background-color: #b52a11;
-    color: #e8e3dd;
-    justify-content: space-around;
-    border-radius: 10px;
-    padding: 1rem 2rem;
-}
-
 .key-insights {
     padding: 2rem 1rem;
     text-align: center;
@@ -485,17 +475,6 @@ h5 {
     color: #5d3c11;
 }
 
-.reflection h3 {
-    text-align: center;
-}
-
-.reflection p {
-    margin: 1rem 2rem;
-}
-
-/* .takeaway {
-    max-width: 100%;
-} */
 
 .takeaway {
     max-width: 100%;
@@ -510,7 +489,6 @@ h5 {
 }
 
 .takeaway .subtitle {
-    font-size: 2rem;
     margin-bottom: 1.5rem;
     color: #e8e3dd;
     text-align: center;
@@ -541,7 +519,6 @@ h5 {
 }
 
 .footer {
-    /* background-color: #5d3c11; */
     font-family: "Cormorant", sans-serif;
     padding: 2rem 1rem;
     text-align: center;
@@ -612,7 +589,7 @@ h5 {
     }
 
     .subtitle {
-        font-size: 1.8rem;
+        font-size: 2rem;
         margin-top: 1.5rem;
         margin-bottom: 0.5rem;
     }
@@ -670,7 +647,7 @@ h5 {
     }
 
     h1 {
-        font-size: 1.5rem;
+        font-size: 2rem;
         margin-top: 5rem;
     }
 
@@ -749,7 +726,7 @@ h5 {
     }
 
     .subtitle {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         margin-top: 1.5rem;
         margin-bottom: 0.5rem;
     }
@@ -791,6 +768,7 @@ h5 {
 
     .stage-name {
         justify-content: center;
+        margin-bottom: 0.5rem;
     }
 
 
@@ -888,9 +866,6 @@ h5 {
         height: auto;
     }
 
-    .reflection {
-        padding: 0.8rem 0.8rem;
-    }
 
     .takeaway {
         margin-left: 2rem;
@@ -899,7 +874,6 @@ h5 {
 
     .takeaway ul {
         grid-template-columns: 1fr;
-        /* 单列 */
     }
 
     .takeaway {

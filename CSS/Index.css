@@ -109,17 +109,6 @@ a {
     height: 100vh;
 }
 
-/* .box {
-    position: fixed;
-    top: 100px;
-    left: 100px;
-    width: 20%;
-    height: 30%;
-    background-color: rgba(85, 119, 164, 0.5);
-    border-radius: 8px;
-    z-index: -1;
-} */
-
 .box {
     position: absolute;
     background-color: rgba(85, 119, 164, 0.5);
@@ -130,6 +119,7 @@ a {
     animation: floatX 3s ease-in-out infinite alternate;
 }
 
+/* Reference: https: //developer.mozilla.org/en-US/docs/Web/CSS/@keyframes */
 @keyframes floatX {
     0% {
         transform: translateX(0);
@@ -223,11 +213,18 @@ a {
     justify-content: center;
     padding: 2rem;
     border-radius: 0 10px 10px 0;
+    transition: background-color 0.3s ease;
 }
 
-.project-content :hover,
-.project-content :focus {
+.project-content img:hover,
+.project-content img:focus {
     opacity: 0.8;
+    cursor: pointer;
+}
+
+.info-box:hover,
+.info-box:focus {
+    background-color: rgb(93, 60, 17, 0.7);
     cursor: pointer;
 
 }
@@ -284,7 +281,6 @@ a {
     transition: opacity 1s ease, transform 1s ease;
 }
 
-/* 进入视口后的状态 */
 .project-image.reveal,
 .info-box.reveal {
     opacity: 1;
@@ -313,7 +309,6 @@ a {
     flex-direction: column;
 }
 
-/* 基础 box 样式 */
 .box-blue,
 .box-brown {
     position: absolute;
@@ -324,7 +319,6 @@ a {
     transition: opacity 0.6s ease;
 }
 
-/* 初始位置 + 缩放（保持与动画一致） */
 .hidden.box-blue {
     transform: translate(-30%, -30%) scale(0.95);
 }
@@ -333,7 +327,6 @@ a {
     transform: translate(30%, 30%) scale(0.95);
 }
 
-/* 飞入动画触发时 */
 .box-blue.reveal {
     animation: flyInBlue 1s ease-out forwards;
 }
@@ -343,7 +336,6 @@ a {
     animation-delay: 0.2s;
 }
 
-/* 蓝色和棕色样式 */
 .box-blue {
     background-color: rgba(85, 119, 164, 0.5);
     top: 35%;
@@ -358,7 +350,6 @@ a {
     height: 15vh;
 }
 
-/* 动画定义 */
 @keyframes flyInBlue {
     from {
         transform: translate(-30%, -30%) scale(0.95);

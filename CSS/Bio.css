@@ -146,6 +146,15 @@ a {
     font-weight: bold;
 }
 
+.skills-paragraph {
+    margin-top: 1rem;
+}
+
+.img-and-contact {
+    display: flex;
+    flex-direction: column;
+}
+
 .contact-me {
     font-style: italic;
     font-weight: bold;
