@@ -160,24 +160,31 @@
 
     <!-- Reference: https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API -->
     <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const image = document.querySelector('.project-image');
+            const infoBox = document.querySelector('.info-box');
 
-        const image = document.querySelector('.project-image');
-        const infoBox = document.querySelector('.info-box');
+            // ✅ JS加载后再添加.hidden，确保非JS环境不受影响
+            if (image) image.classList.add('hidden');
+            if (infoBox) infoBox.classList.add('hidden');
 
-        const observerImageInfo = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('reveal');
-                    observerImageInfo.unobserve(entry.target);
-                }
+            const observerImageInfo = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('reveal');
+                        entry.target.classList.remove('hidden');
+                        observerImageInfo.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.3
             });
-        }, {
-            threshold: 0.3
-        });
 
-        if (image) observerImageInfo.observe(image);
-        if (infoBox) observerImageInfo.observe(infoBox);
+            if (image) observerImageInfo.observe(image);
+            if (infoBox) observerImageInfo.observe(infoBox);
+        });
     </script>
+
 
 
     <script>
